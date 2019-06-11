@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="au theme template">
+    <meta name="author" content="Hau Nguyen">
+    <meta name="keywords" content="au theme template">
+
+    <!-- Title Page-->
+    <title>Create New Package</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+
+<script>
+		$(function() {
+		$("#packageUpload").submit(function(e){
+			e.preventDefault();    
+			var formData = new FormData(this);
+						
+			var urlkey
+			
+			if(location.hostname=='localhost')
+			{
+				urlkey = "/project1/admin/uploadPackage.php";
+			}
+			else if(location.hostname=='himalyanfurniture.com')
+			{
+				urlkey = "uploadPackage.php";
+			}
+			var extension = $('#imagefile').val().split('.').pop().toLowerCase();
+			
+			if((extension == 'gif')||(extension == 'png')||(extension == 'jpg')||(extension == 'jpeg'))
+			{
+			$.ajax({
+				
+				url: urlkey,
+				method: "POST",
+				data: formData,
+				success: function(result){alert(result);//fnametodb();
+				},
+				failure: function(err){alert(err);},
+				cache: false,
+				contentType: false,
+				processData: false
+				
+			});
+			}
+			else{
+				alert("Invalid Image File");
+				$('#image').val('');
+				return false;
+			}
+			return(false);
+		});
+	});
+</script>
+</head>
+
+<body class="animsition">
+<br>
+    <div class="page-wrapper">
+        
+            <!-- MAIN CONTENT-->
+            <!--<div class="main-content">-->
+                <div class="section__content section__content--p75">
+                    <div class="container-fluid">
+                        <div class="row">
+                            
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <strong>Create New Package</strong>
+                                    </div>
+                                    <div class="card-body card-block">
+                                        <form id="packageUpload" action="" method="post" enctype="multipart/form-data" class="form-horizontal">
+                                            <div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Package Name</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="packageName" placeholder="Text" class="form-control" required>
+                                                    
+                                                </div>
+                                            </div>
+														
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="file-input" class=" form-control-label">Banner image for package</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="file" id="imagefile" name="imagefile" class="form-control-file" required>
+                                                </div>
+                                            </div>
+											
+											<!--<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Image Name</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="imagefilename" name="image" class="form-control" placeholder="Enter same file name as that of image name" required>
+                                                    
+                                                </div>
+                                            </div>-->
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Package Duration</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="number" id="text-input" name="packageDurationNight" placeholder="Number of Nights" class="form-control" required>
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label"></label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="number" id="text-input" name="packageDurationDay" placeholder="Number of Days" class="form-control" required>
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Package Validity</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="packageValidity" placeholder="Text" class="form-control" required>
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Destinations</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="destination1" placeholder="Text" class="form-control" required>
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="destination2" placeholder="Text" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="destination3" placeholder="Text" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="destination4" placeholder="Text" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="destination5" placeholder="Text" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="destination6" placeholder="Text" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="destination7" placeholder="Text" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="destination8" placeholder="Text" class="form-control">
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="destination9" placeholder="Text" class="form-control">
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="destination10" placeholder="Text" class="form-control">
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Package Cost</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="number" id="text-input" name="packageCost" placeholder="Cost in number" class="form-control" required>
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label"><strong>Itinerary</strong><br>Day1</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh1" placeholder="Title" class="form-control" required>
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd1" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day2</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh2" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd2" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day3</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh2" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd2" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day3</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh3" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd3" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day4</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh4" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd4" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day5</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh5" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd5" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day6</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh6" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd6" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day7</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh7" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd7" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day8</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh8" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd8" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day9</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh9" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd9" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day10</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh10" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd10" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day11</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh11" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd11" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day12</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh12" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd12" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day13</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh13" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd13" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day14</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh14" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd14" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day15</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh15" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd15" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day16</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh16" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd16" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Day17</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <input type="text" id="text-input" name="itineraryh17" placeholder="Title" class="form-control" >
+                                                    
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="itineraryd17" id="textarea-input" rows="9" placeholder="Description" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Inclusions</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="inclusions" id="textarea-input" rows="9" placeholder="Text" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label for="text-input" class=" form-control-label">Exclusions</label>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <textarea name="exclusions" id="textarea-input" rows="9" placeholder="Text" class="form-control"></textarea>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Is this package featured one?</label>
+                                                </div>
+                                                <div class="col col-md-9">
+                                                    <div class="form-check-inline form-check">
+                                                        <label for="inline-radio1" class="form-check-label ">
+                                                            <input type="radio" id="inline-radio1" name="featured" value="1" class="form-check-input" required>Yes &nbsp; &nbsp; &nbsp;
+                                                        </label>
+                                                        <label for="inline-radio2" class="form-check-label ">
+                                                            <input type="radio" id="inline-radio2" name="featured" value="0" class="form-check-input">No
+                                                        </label>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+											<div class="row form-group">
+                                                <div class="col col-md-3">
+                                                    <label class=" form-control-label">Domestic or International?</label>
+                                                </div>
+                                                <div class="col col-md-9">
+                                                    <div class="form-check-inline form-check">
+                                                        <label for="inline-radio1" class="form-check-label ">
+                                                            <input type="radio" id="inline-radio1" name="dori" value="1" class="form-check-input" required>Domestic &nbsp; &nbsp; &nbsp;
+                                                        </label>
+                                                        <label for="inline-radio2" class="form-check-label ">
+                                                            <input type="radio" id="inline-radio2" name="dori" value="0" class="form-check-input">International
+                                                        </label>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+											<div class="card-footer">
+											<input type="submit" name="submit" id="submit" value="submit" class="btn btn-primary btn-sm" >
+												
+											<button type="reset" class="btn btn-danger btn-sm">
+												<i class="fa fa-ban"></i> Reset
+											</button>
+											</div>
+											
+                                        </form>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js">
+    </script>
+
+    <!-- Main JS-->
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
+<!-- end document-->

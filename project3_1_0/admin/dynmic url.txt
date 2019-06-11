@@ -1,0 +1,59 @@
+function for more data
+<script>
+	function seeMoreData(element){
+		var candidateId=element.childNodes[1].innerHTML;
+		//alert(candidateId);
+		if(location.hostname=='localhost')
+			{
+				window.open("/web_project/employer/post.php?id="+candidateId.toString());
+			}
+			else if(location.hostname=='cogentsol.in')
+			{
+				window.open("post.php?id="+candidateId.toString());
+			}
+	}
+</script>
+
+see more in table
+<?php
+						if($_SERVER['SERVER_NAME']=='localhost')
+						{
+							$servername = "localhost";
+							$username = "root";
+							$password = "";
+							$dbname = "dbase2";
+						}
+						else if($_SERVER['SERVER_NAME']=='cogentsol.in')
+						{
+							$servername = "sun";
+							$username = "cogentso_root";
+							$password = "rootPWD@#";
+							$dbname = "cogentso_dbase2";
+						}
+							
+						// Create connection
+						$conn = new mysqli($servername, $username, $password, $dbname);
+						// Check connection
+						if ($conn->connect_error) {
+						    die("Connection failed: " . $conn->connect_error);
+						} 
+
+							$sql = "SELECT * FROM candidate";
+
+							$result = $conn->query($sql);
+						if ($result->num_rows > 0) {
+					    echo "<table class='table ' ><tr> <th>ID</th> <th>First Name</th> <th>Last Name</th> <th> Email Id</td> <th> Mobile No</th> <th> Qualification</th></tr>";
+					    while($row = $result->fetch_assoc()) {
+					    	if($row["sno"]<10)
+					        echo "<tr> <td>0000" . $row["sno"]. "</td> <td> " . $row["fname"]. "</td> <td> " . $row["lname"]. "</td> <td> " . $row["emailid"]. "</td> <td> " . $row["mobileno"]. "</td> <td> " . $row["qualification"]. "</td><td onclick='seeMoreData(this.parentNode);'><a>See More...</a></td></tr>";
+					    else if($row["sno"]<100)
+					        echo "<tr> <td>000" . $row["sno"]. "</td> <td> " . $row["fname"]. "</td> <td> " . $row["lname"]. "</td> <td> " . $row["emailid"]. "</td> <td> " . $row["mobileno"]. "</td> <td> " . $row["qualification"]. "</td><td onclick='seeMoreData(this.parentNode);'><a>See More...</a></td></tr>";
+					    else
+					        echo "<tr> <td>00" . $row["sno"]. "</td> <td> " . $row["fname"]. "</td> <td> " . $row["lname"]. "</td> <td> " . $row["emailid"]. "</td> <td> " . $row["mobileno"]. "</td> <td> " . $row["qualification"]. "</td><td onclick='seeMoreData(this.parentNode);'><a>See More...</a></td></tr>";
+					    }
+
+globle variable 
+$iddd=$_GET["id"];
+
+sql command
+$sql = "SELECT * FROM `candidate` where `sno`=".$iddd;

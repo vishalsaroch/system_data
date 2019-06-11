@@ -1,0 +1,50 @@
+{
+  "fields": {
+    "name": "Ім'я",
+    "parent": "Батько",
+    "status": "Статус",
+    "dateStart": "Дата початку",
+    "dateEnd": "Кінцева дата",
+    "dateStartDate": "Дата початку (весь день)",
+    "dateEndDate": "Дата завершення (весь день)",
+    "priority": "Пріоритет",
+    "description": "Опис",
+    "isOverdue": "Прострочено",
+    "account": "Контрагент",
+    "dateCompleted": "Дата завершення",
+    "attachments": "Вкладення",
+    "reminders": "Нагадування",
+    "contact": "Контакт"
+  },
+  "links": {
+    "attachments": "Вкладення",
+    "account": "Контрагент",
+    "contact": "Контакт"
+  },
+  "options": {
+    "status": {
+      "Not Started": "Не почалося",
+      "Started": "Почалося",
+      "Completed": "Завершено",
+      "Canceled": "Скасовано",
+      "Deferred": "Відстрочено"
+    },
+    "priority": {
+      "Low": "Низько",
+      "Normal": "Нормальний",
+      "High": "Високо",
+      "Urgent": "Терміново"
+    }
+  },
+  "labels": {
+    "Create Task": "Створити завдання",
+    "Complete": "Завершити"
+  },
+  "presetFilters": {
+    "actual": "Актуальні",
+    "completed": "Завершені",
+    "deferred": "Відстрочені",
+    "todays": "Сьогоднішні",
+    "overdue": "Прострочені"
+  }
+}

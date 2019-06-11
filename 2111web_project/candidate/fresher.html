@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fresher Registration</title>
+  <link rel="icon" href="images/ashwani.png" type="image/png">
+	 <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+ 
+<script>
+    $(function() {
+		$("#FresherRegister").submit(function(e){
+			e.preventDefault();    
+			var formData = new FormData(this);
+						
+			 var userid=document.getElementById("emailid").value;
+                    var pwd=document.getElementById("fname").value.slice(0,4)+document.getElementById("contactNo").value.slice(6);
+                    //alert(pwd);
+                    var urlkey2222="http://sms.realkeeper.in/ComposeSMS.aspx?username=nakul&password=8585&sender=TXTSMS&to="+document.getElementById("contactNo").value+"&message=Hi, Your Userid - "+userid+" Password - "+pwd+" Please visit https://cogentsol.in/employer/dashbord2&priority=1&dnd=1&unicode=0";
+      var urlkey;
+			
+			if(location.hostname=='localhost')
+			{
+				urlkey = "/web_project/candidate/FresherRegister.php";
+			}
+			else if(location.hostname=='cogentsol.in')
+			{
+				urlkey = "FresherRegister.php";
+			}
+			 var data12 = "userid="+userid+"&pwd="+pwd+"&compName="+document.getElementById("fname").value+"&contactNo="+document.getElementById("mobileno").value;
+                    alert(data12);
+			
+            
+			$.ajax({
+				
+				url: urlkey2222,
+				method: "GET",
+				
+				success: function(result){alert("SMS Sent")
+                        $.ajax({
+				        url: urlkey,
+                        method: "POST",
+                        data: Data12,
+                        success: function(result){alert(result);
+                        window.location = "profile.php";},
+                        failure: function(err){alert(err);},
+                        cache: false,
+                        contentType: false,
+                        processData: false
+			});
+				},
+				failure: function(err){alert(err);},
+				
+			});
+			return(false);
+		});
+
+                $.ajax({
+        
+        url: urlkey2222,
+        method: "GET",
+        
+        success: function(result){alert("SMS Sent")
+                        $.ajax({
+                url: urlkey,
+                        method: "POST",
+                        data: Data12,
+                        success: function(result){alert(result);
+                        window.location = "dashbord2.php";},
+                        failure: function(err){alert(err);},
+                        cache: false,
+                        contentType: false,
+                        processData: false
+      });
+        },
+        failure: function(err){alert(err);},
+        
+      });
+
+	});
+
+</script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 align= "center">I am <font size="6" color="blue"><b>Fresher</b></font></h3>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" >
+            <div class="col-md-4 register-left" style=" margin-top: 100px;">
+                <img src="images/icon_1.png" height="250px" width="350px" />
+                   <!--  <h3>Welcome</h3>
+                        <p>I am Frisher</p> -->
+                </div>
+                <div class="col-md-8 " style=" margin-top: 100px;">
+                    <div class="row register-form">
+                                 
+                       <form id="FresherRegister" action="" method="post"  enctype="multipart/form-data">
+                        
+                            <div class="form-group">
+                                <div class="col-md-6"style="margin-top: 20px;">
+                                        <label>First Name</label>
+                                        <input type="text" id="name123" class="form-control" placeholder="First Name *" name="fname" required="true" />
+                                    </div>
+         
+                                   <div class="col-md-6" style="margin-top: 20px;">
+                                        <label>Last Name</label>
+                                        <input type="text" class="form-control" placeholder="Last Name *" name="lname" required="true"/>
+                                     </div>
+
+                                     <div class="col-md-6"style="margin-top: 20px;">
+                                   
+                                        <label>Email </label>
+                                        <input type="email" class="form-control" placeholder="Your Email *" name="email" required="true" />
+                                    </div>
+
+                                   <div class="col-md-6"style="margin-top: 20px;">
+                                        <label>Mobile Number</label>
+                                        <input type="text" id="phoneno" minlength="10" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *" required="true"/>
+                                    </div>
+
+                                   <div class="col-md-6"style="margin-top: 20px;"> 
+                                        <label>Qualifaction</label>
+                                        <input type="text" class="form-control" placeholder="qualifaction *" name="qua" required="true"/>
+                                     </div>
+                                                        
+                                     <div class="col-md-6"style="margin-top: 20px;">
+                                        <label>Job Title</label>
+                                        <input type="text" class="form-control" placeholder="Job Title  *" name="job" required="true"/>
+                                  </div>
+                                  
+                                  <div class="col-md-6"style="margin-top: 20px;">
+                                     <p>ALREADY HAVE AN ACCOUNT <a href="../login/index.php">LOGIN</a> HERE</p>
+                                  </div>
+                                  
+                                   <div class="col-md-6"style="margin-top: 20px;">
+                                      <input type="submit" class="btn btn-info" value="Sign Up" style="margin-top: 20px; margin-left:280px"> 
+                                  </div> 
+
+                            </div>
+                          </form>
+                        </div>                  
+    </div>
+</body>
+</html>

@@ -1,0 +1,10 @@
+.panel-default, .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td, hr, .table-bordered{
+	border:1px solid #000;
+}
+.jobsheet{
+	border:1px solid black;
+	margin:0 10px 0 10px;
+}
+.panel-footer{
+	padding: 5px;
+}

@@ -1,0 +1,95 @@
+[04-Oct-2017 01:34:53 Asia/Kolkata] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - headers already sent in /home1/mycrmkva/indocrm.space/ModelFiles/fnction_nologin.php on line 21
+[04-Oct-2017 01:34:53 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/mycrmkva/indocrm.space/ControllerFiles/process_nologin.php:23) in /home1/mycrmkva/indocrm.space/ControllerFiles/process_nologin.php on line 42
+[04-Oct-2017 01:34:54 Asia/Kolkata] PHP Notice:  Undefined index: s_user_level in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 201
+[29-Oct-2017 14:43:05 Asia/Kolkata] PHP Warning:  Invalid argument supplied for foreach() in /home1/mycrmkva/indocrm.space/ViewFiles/user/center-reports.php on line 183
+[11-Nov-2017 11:56:40 Asia/Kolkata] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[13-Nov-2017 19:44:36 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 250
+[13-Nov-2017 19:44:36 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 250
+[13-Nov-2017 19:44:36 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 250
+[13-Nov-2017 19:44:36 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 250
+[13-Nov-2017 19:44:36 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 250
+[13-Nov-2017 19:49:12 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 250
+[13-Nov-2017 19:49:12 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 250
+[13-Nov-2017 19:49:12 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 250
+[13-Nov-2017 19:49:12 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 250
+[13-Nov-2017 19:49:12 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 250
+[13-Nov-2017 19:54:35 Asia/Kolkata] PHP Warning:  session_regenerate_id(): Cannot regenerate session id - headers already sent in /home1/mycrmkva/indocrm.space/ModelFiles/fnction_nologin.php on line 21
+[13-Nov-2017 19:54:35 Asia/Kolkata] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home1/mycrmkva/indocrm.space/ControllerFiles/process_nologin.php:23) in /home1/mycrmkva/indocrm.space/ControllerFiles/process_nologin.php on line 42
+[13-Nov-2017 19:54:36 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 324
+[13-Nov-2017 19:54:36 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 324
+[13-Nov-2017 19:54:36 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 324
+[13-Nov-2017 19:54:36 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 324
+[13-Nov-2017 19:54:36 Asia/Kolkata] PHP Notice:  Undefined index: complaint in /home1/mycrmkva/indocrm.space/ViewFiles/user/home.php on line 324
+[26-Nov-2017 07:13:28 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:13:28 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:13:28 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:25:21 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:25:21 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:25:21 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:39:26 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:39:26 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:39:26 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:52:04 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:52:04 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 07:52:04 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 08:04:18 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 08:04:18 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[26-Nov-2017 08:04:18 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[03-Dec-2017 11:36:41 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[03-Dec-2017 11:36:41 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[03-Dec-2017 11:36:41 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[09-Dec-2017 04:16:59 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[09-Dec-2017 04:16:59 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[09-Dec-2017 04:16:59 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[12-Dec-2017 22:53:00 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[12-Dec-2017 22:53:01 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[12-Dec-2017 22:53:01 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[15-Dec-2017 22:04:10 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[15-Dec-2017 22:04:10 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[15-Dec-2017 22:04:10 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[16-Dec-2017 18:46:54 Asia/Kolkata] PHP Deprecated:  Automatically populating $HTTP_RAW_POST_DATA is deprecated and will be removed in a future version. To avoid this warning set 'always_populate_raw_post_data' to '-1' in php.ini and use the php://input stream instead. in Unknown on line 0
+[17-Dec-2017 16:17:07 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:17:07 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:17:07 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:32:20 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:32:20 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:32:20 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:39:12 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:39:12 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:39:12 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:52:11 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:52:11 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 16:52:11 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 17:02:24 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 17:02:24 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[17-Dec-2017 17:02:24 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[30-Dec-2017 05:10:54 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[30-Dec-2017 05:10:54 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[30-Dec-2017 05:10:54 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/indocrm.space/admin.php on line 3
+[10-Jan-2018 23:58:12 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[10-Jan-2018 23:58:12 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[10-Jan-2018 23:58:12 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[11-Jan-2018 23:44:37 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[11-Jan-2018 23:44:37 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[11-Jan-2018 23:44:37 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[16-Jan-2018 22:57:03 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[16-Jan-2018 22:57:03 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[16-Jan-2018 22:57:03 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[04-Feb-2018 05:13:05 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[04-Feb-2018 05:13:05 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[04-Feb-2018 05:13:05 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[07-Feb-2018 02:53:31 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[07-Feb-2018 02:53:31 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[07-Feb-2018 02:53:31 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[09-Feb-2018 00:51:49 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[09-Feb-2018 00:51:49 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[09-Feb-2018 00:51:49 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[04-Mar-2018 01:58:20 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[04-Mar-2018 01:58:20 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[04-Mar-2018 01:58:20 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[05-Mar-2018 23:44:32 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[05-Mar-2018 23:44:32 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[05-Mar-2018 23:44:32 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[06-Apr-2018 03:45:07 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[06-Apr-2018 03:45:07 Asia/Kolkata] PHP Warning:  require(ModelIncludes/config_dj.php): failed to open stream: No such file or directory in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3
+[06-Apr-2018 03:45:07 Asia/Kolkata] PHP Fatal error:  require(): Failed opening required 'ModelIncludes/config_dj.php' (include_path='.:/opt/php56/lib/php') in /home1/mycrmkva/secured/indocrm.space/admin.php on line 3

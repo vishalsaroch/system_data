@@ -1,0 +1,118 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+ 	<title>Hire a Empyoyee</title>
+  <link rel="icon" href="images/ashwani.png" type="image/png">
+ 	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <script>
+     $(function() {
+                
+                $("#employerForm").submit(function(e){       
+                    e.preventDefault();    
+                    
+                                
+                    var userid=document.getElementById("emailid").value;
+                    var pwd=document.getElementById("compName").value.slice(0,4)+document.getElementById("contactNo").value.slice(6);
+                    //alert(pwd);
+                    var urlkey2222="http://sms.realkeeper.in/ComposeSMS.aspx?username=nakul&password=8585&sender=TXTSMS&to="+document.getElementById("contactNo").value+"&message=Hi, Your Userid - "+userid+" Password - "+pwd+" Please visit https://cogentsol.in/employer/dashbord2&priority=1&dnd=1&unicode=0";
+
+                      var urlkey;
+
+                    if(location.hostname=='localhost')
+                    {
+                        urlkey = "/web_project/employer/sendmail2.php";
+                    }
+                    else if(location.hostname=='cogentsol.in')
+                    {
+                        urlkey = "sendmail2.php";
+                    }
+                    var data12 = "userid="+userid+"&pwd="+pwd+"&compName="+document.getElementById("compName").value+"&contactNo="+document.getElementById("contactNo").value;
+                    //alert(data12);
+                    
+                    $.ajax({
+                        
+                        url: urlkey2222,
+                        method: "GET",
+                        
+                        success: function(result){
+                                      
+                          
+                                },
+                        failure: function(result){
+                    });
+
+                    //return(false);
+                                    alert("SMS Sent");
+                                    $.ajax({
+                                    url: urlkey,
+                                    method: "POST",
+                                    data: data12,
+                                    success: function(result){alert(result);
+                                              window.location = "./dashbord2.php";
+                                    },
+                                    failure: function(err){alert(err);}
+                                
+                                  });
+                });
+              });
+
+               
+   </script> 
+ </head>
+ <body>
+   <nav class="navbar ">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <img src="images/ashwani.png" style="height: 120px; margin-bottom: 20px; margin-top: 20px;" align="center">
+    </div>
+  </div>
+</nav>
+ 		<div class="container"> 		
+ 			
+ 		</div>
+  </div>
+
+ 		<div class="container" style="margin-bottom: 20px;">
+      <div class="row">
+
+ 			  <div class="col-md-8">
+          <img src="images/11.jpg" style="height: 300px; width: 380px; margin-top: 50px;">
+       </div>
+
+          <div class="col-md-4">
+              <div class="row">
+                  <form action="" id="employerForm" method="post">
+                      <h3><font size="6" color="blue">Employer</font> Registration</h3>
+                    <div class="col-md-12" style="margin-top: 20px;">
+                      <label>Company Name</label>
+                      <input type="text" id="compName" class="form-control" placeholder="company Name *" value="" required />
+                    </div>
+
+                  <div class="col-md-12" style="margin-top: 20px;">
+                    <label>Offical Email</label>
+                    <input type="Email" id="emailid" class="form-control" placeholder="Offical Emailid *" value=""  required />
+                  </div>
+
+                  <div class="col-md-12"style="margin-top: 20px;">
+                    <label>Contact Number</label>
+                    <input type="number" id="contactNo" class="form-control" placeholder="Office Number *" value="" required />
+                  </div>
+                          <!-- <a href="dashbord2.html" align=""><button type="button" class="btn btn-info">Continue</button></a> -->
+                        <input type="submit" name="continue" value="Signup" class="btn btn-info" style="margin-top:20px; margin-left: 300px;">
+                        <p>Already have an account ? <a href="../login/index.php">Login</a></p>
+
+                  </form>
+                 </div>
+               </div>
+                 
+		</form>
+ 		</div>
+    </div>
+
+ 	  <footer style="height:100px;"></footer>
+ </body>
+ </html>

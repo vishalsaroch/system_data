@@ -1,0 +1,13 @@
+{
+    "name": "vard",
+    "short_name": "realkeeper",
+    "lang": "en-US",
+    "start_url": "/index.php",
+    "display": "standalone",
+    "icons": [
+      {
+        "src": "images/logo"
+      }
+    ],
+    "prefer_related_applications": true
+  }

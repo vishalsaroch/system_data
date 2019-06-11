@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Aboutus</title>
+	<link rel="icon" href="images/ashwani.png" type="image/png">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="footer.css">
+   <link rel="stylesheet" type="text/css" href="main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+  	$(function () {
+  $(document).scroll(function () {
+	  var $nav = $(".navbar-fixed-top");
+	  $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+	});
+});
+  </script>
+</head>
+<body>
+		<div class="wrapper">
+		<div class="header">
+		<?php include("nav.php"); ?>
+			<!-- <nav class="navbar-headerbar  navbar-fixed-top">                                                                                   
+			   <div class="container-fluid">
+			    <div class="navbar-header">
+			      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>
+			        <span class="icon-bar"></span>                        
+			      </button>
+			      <a class="navbar-brand" href="index.html"><img src="images/ashwani.png" style="margin-top: -20px;"></a>
+				    </div>
+				    <div class="collapse navbar-collapse" id="myNavbar">
+				      <ul class="nav navbar-nav navbar-right">
+				        <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"></span> Home </a></li>
+				               <li><a href="aboutus.html">About Company</a></li>
+				              <li class="dropdown">
+				                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Services<span class="caret"></span></a>
+				                <ul class="dropdown-menu">
+				                  <li><a href="payroll.html">Payroll & Statutory Compliance</a></li>
+				                  <li><a href="requirment.html">Recruitment & Staffing</a></li>
+				                  <li><a href="training.html">Training</a></li>
+				                </ul>
+				              </li>
+				          <li><a href="contact.php">Contact </a></li>
+				            <li class="dropdown">
+				                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Employer Zone<span class="caret"></span></a>
+				                <ul class="dropdown-menu">
+				                  <li><a href="login/index.php">Login</a></li>
+				                  <li><a href="candidate/as.html">Registration</a></li> 
+				                </ul>
+				            </li>
+				           <li class="dropdown">
+				                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Employee Zone<span class="caret"></span></a>
+				                <ul class="dropdown-menu">
+				                  <li><a href="login/index.php">Login</a></li>
+				                  <li><a href="employer/EmployerSignup.html">Registration</a></li>
+				                </ul>
+				            </li>
+				      </ul>
+				    </div>
+				  </div>
+				</nav> -->
+				
+		</div>
+
+		<div class="container">
+			<h1 align="center" style="margin-top: 30px; background-color: black;color: white; opacity: 0.5;">ABOUT US</h1>
+			<p>"Cogent Solutions is a leading Business support services provider, with the aim of providing employment, Payroll, statutory compliance services, cost effective recruitment & manpower solution, by deeply understanding of requirement of our clients across any possible functional area. </p>
+ 
+			<p>We have been providing eminent corporate, with the best professionals to suit every possible manpower requirement and have, in turn, acquired an enviable reputation in India as a leading manpower solution provider. </p>
+ 
+			<p>It’s our commitment to our client to find solution to their problems.</p>  
+ 
+			<p>Essentially, our aim is to delight our clients with our efficient services to providing qualitative manpower to our clients.</p>
+		</div>
+	</div>
+	
+<!-- Footer -->
+	<section id="footer">
+		<div class="container">
+			<div class="row text-center text-xs-center text-sm-left text-md-left">
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Quick links</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Quick links</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Videos</a></li>
+					</ul>
+				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<h5>Quick links</h5>
+					<ul class="list-unstyled quick-links">
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Home</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>About</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>FAQ</a></li>
+						<li><a href="javascript:void();"><i class="fa fa-angle-double-right"></i>Get Started</a></li>
+						<li><a href="https://wwwe.sunlimetech.com" title="Design and developed by"><i class="fa fa-angle-double-right"></i>Imprint</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+					<ul class="list-unstyled list-inline social text-center">
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-twitter"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-google-plus"></i></a></li>
+						<li class="list-inline-item"><a href="javascript:void();" target="_blank"><i class="fa fa-envelope"></i></a></li>
+					</ul>
+				</div>
+				</hr>
+			</div>	
+			<div class="row">
+				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+					<p><u><a href="https://www.nationaltransaction.com/">National Transaction Corporation</a></u> is a Registered MSP/ISO of Elavon, Inc. Georgia [a wholly owned subsidiary of U.S. Bancorp, Minneapolis, MN]</p>
+					<p class="h6">&copy All right Reversed.<a class="text-green ml-2" href="https://www.sunlimetech.com" target="_blank">Sunlimetech</a></p>
+				</div>
+				</hr>
+			</div>	
+		</div>
+	</section>
+	<!-- ./Footer -->
+</body>
+</html>

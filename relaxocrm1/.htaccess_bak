@@ -1,0 +1,56 @@
+ErrorDocument 401 http://www.relaxocrm.space/error/401
+ErrorDocument 403 http://www.relaxocrm.space/error/404
+ErrorDocument 404 http://www.relaxocrm.space/error/404
+ErrorDocument 400 http://www.relaxocrm.space/error/400
+#ErrorDocument 500 http://www.relaxocrm.space/error/500
+ErrorDocument 502 http://www.relaxocrm.space/error/502
+ErrorDocument 504 http://www.relaxocrm.space/error/504
+#
+DirectoryIndex index
+Options -Indexes
+SetEnv TZ Asia/Kolkata
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	# -----   Uncomment Below for Maintenance redirect
+		 #RewriteCond %{REMOTE_ADDR} !^103\.211\.12\.64
+		 #RewriteCond %{REMOTE_ADDR} !^27\.60\.58\.134
+		 #RewriteCond %{REQUEST_URI} !/maintenance.php$ [NC]
+		 #RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+		 #RewriteRule .* /maintenance.php [R=302,L]
+	# -----   Uncomment Above for Maintenance redirect
+	## simplify URL by page GET variable
+	RewriteCond %{HTTP_HOST} ^relaxocrm.space
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule (.*) http://www.relaxocrm.space/$1 [R=301,L]
+	RewriteBase /
+	RewriteCond %{QUERY_STRING} (\"|%22).*(<|>|%3) [NC,OR]
+	RewriteCond %{QUERY_STRING} (javascript:).*(\;) [NC,OR]
+	RewriteCond %{QUERY_STRING} (<|%3C).*script.*(>|%3) [NC,OR]
+	RewriteCond %{QUERY_STRING} (\\|\.\./|`|=\'$|=%27$) [NC,OR]
+	RewriteCond %{QUERY_STRING} (\;|\'|\"|%22).*(union|select|insert|drop|update|md5|benchmark|or|and|if) [NC,OR]
+	RewriteCond %{QUERY_STRING} (base64_encode|localhost|mosconfig) [NC,OR]
+	RewriteCond %{QUERY_STRING} (boot\.ini|echo.*kae|etc/passwd) [NC,OR]
+	RewriteCond %{QUERY_STRING} (GLOBALS|REQUEST)(=|\[|%) [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule .* - [F]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule ^BestWebs/?$ admin.php [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule ^([a-zA-Z0-9-]+)/([a-zA-Z0-9-]+)/?$ index.php?page=$1&var=$2 [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule ^([a-zA-Z0-9-]+)/?$ index.php?page=$1 [NC]
+RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[0-9a-zA-Z_-]+$
+RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+	RewriteRule ^/?$ index.php [NC]
+</IfModule>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fresher Registration</title>
+        <link rel="icon" href="images/ashwani.png" type="image/png">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script>
+            $(function() {
+                //#FresherRegister form id
+                $("#ExperinceRegister").submit(function(e){       
+                    e.preventDefault();    
+                    var userid=document.getElementById("email").value;
+                    var pwd=document.getElementById("name123").value.slice(0,4)+document.getElementById("phoneno").value.slice(6);
+                    //var pwd=document.getElementById("compName").value.slice(0,4)+document.getElementById("contactNo").value.slice(6);
+                    document.getElementById("pwd123").value=pwd;
+                    var formData = new FormData(this);
+                                
+                    var urlkey;
+                    
+                    if(location.hostname=='localhost')
+                    {
+                        urlkey = "/web_project/candidate/ExperinceRegister.php";
+                    }
+                    else if(location.hostname=='cogentsol.in')
+                    {
+                        urlkey = "ExperinceRegister.php";
+                    }
+                    
+                    
+                    var urlkey2222="http://sms.realkeeper.in/ComposeSMS.aspx?username=nakul&password=8585&sender=TXTSMS&to="+document.getElementById("phoneno").value+"&message=Hi "+document.getElementById("name123").value+", We recieved your form. We will get back to you. Thanks for contacting us.&priority=1&dnd=1&unicode=0";
+                    // var urlkey2222="http://sms.realkeeper.in/ComposeSMS.aspx?username=nakul&password=8585&sender=TXTSMS&to="+document.getElementById("fname").value+"&message=Hi, Your Userid - "+userid+" Password - "+pwd+" Please visit https://cogentsol.in/candidate/profile/profile&priority=1&dnd=1&unicode=0";
+                    
+                    
+                   
+                    $.ajax({
+                                url: urlkey,
+                                method: "POST",
+                                data: formData,
+                                success: function(result){alert(result);
+                                
+                                if(result!=="Email id already exist."){
+                                window.location = "profile/profile.php";
+                                 $.ajax({
+                        
+                                            url: urlkey2222,
+                                            method: "GET",
+                                            
+                                            success: function(result){alert("SMS Sent");                                
+                                            },
+                                            failure: function(err){alert(err);},
+                                            
+                                        });
+                                    }
+                                },
+                                failure: function(err){alert(err);},
+                                cache: false,
+                                contentType: false,
+                                processData: false
+                    });
+                    // return(false);
+                });
+            });
+
+</script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <img src="images/ashwani.png">
+                <h3 align= "center">I am <font size="6" color="blue">Fresher</font></h3>
+            </div>
+        </div>
+        <div class="container">
+        <div class="row">
+            <div class="col-md-4 register-left" style="margin-top: 120px;">
+                <img src="images/icon_1.png" height="250px" width="350px" />    
+            </div>
+            <div class="col-md-8 " style="margin-top: 70px;">
+                <div class="row register-form">
+                    <form action="" method="post" id="ExperinceRegister" enctype="multipart/form-data">
+                        <div class="col-md-6" style="margin-top: 20px;">
+                            <label>First Name</label>
+                            <input type="text" id ="name123" name="fname" class="form-control" placeholder="First Name *" required />
+                        </div>
+                        <div class="col-md-6" style="margin-top: 20px;" style="margin-top: 20px;">
+                            <label>Last Name</label>
+                            <input type="text" name="lname" class="form-control" placeholder="Last Name *"  required />
+                        </div>
+
+                        <div class="col-md-6" style="margin-top: 20px;">
+                            <label>Email Id</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="Your Email *"  required/>
+                        </div>
+
+                        <div class="col-md-6" style="margin-top: 20px;">
+                            <label>Mobile Number</label>
+                            <input type="number" minlength="10" id="phoneno" maxlength="10" name="txtEmpPhone" class="form-control" placeholder="Your Phone *"/>
+                        </div>
+
+                        <div class="col-md-6" style="margin-top: 20px;">
+                            <label>Qualifaction</label>
+                            <input type="text" name="qua" class="form-control" placeholder="qualifaction *" required/>
+                        </div>
+                                                    
+                        <div class="col-md-6" style="margin-top: 20px;">
+                            <label>Job Title</label>
+                            <input type="text" name="job" class="form-control" placeholder="Job Title *" required/>    
+                        </div>
+
+                        <!-- <div class="col-md-12" style="margin-top: 20px;" style="margin-top: 20px;">
+                            <label>Experince</label>
+                        </div> -->
+                        
+                        <!-- <div class="col-md-6" style="margin-top: 20px;">
+                            <label>Years</label>
+                            <select class="form-control" name="year">
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="6">7</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>         
+                                </select>                                        
+                            </div>
+
+                            <div class="col-md-6" style="margin-top: 20px;">            
+                                <label>Months</label>
+                                <select class="form-control" name="month">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="6">7</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div> -->
+                            <input type="text" id="pwd123" style="display:none;" name="pwd">
+                              <div class="col-md-6"style="margin-top: 20px;">
+                                     <p>ALREADY HAVE AN ACCOUNT  <a href="../login/index.php">LOGIN</a> HERE</p>
+                                  </div>
+                                  
+                                   <div class="col-md-6"style="margin-top: 20px;">
+                                      <input type="submit" class="btn btn-info" value="Sign Up" style="margin-top: 20px; margin-left:280px"> 
+                                  </div>
+                        </form>     
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

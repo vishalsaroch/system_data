@@ -1,0 +1,43 @@
+
+body {
+  padding-top: 0px;
+  background: #fff;
+}
+.container{
+  margin-bottom: 100px;
+}
+.navbar-fixed-top.scrolled {
+	background-color: black !important;	
+  cursor: pointer;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+  
+  transition: background-color 200ms linear;
+  
+}
+
+.navbar-fixed-top.scrolled .nav-link {
+  color:#555;
+}
+  	a{
+  		font-weight: bold;
+      
+  	}
+
+    
+  	li:hover {
+    background-color: black !important;
+    opacity: 0.5;
+}
+  	.header{
+  	background-image: url("images/Banner4.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-attachment: fixed;
+    width: 100%;
+    height: 700px; 
+    background-size: 100% 100%;
+  	}
+  
