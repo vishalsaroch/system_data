@@ -139,7 +139,7 @@
 						</table>
 					</div>
 				</div>
-					<div class="db-list-com tz-db-table">
+					<!-- <div class="db-list-com tz-db-table">
 						<div class="ds-boar-title">
 							<h2>Payment & analytics</h2>
 							<p>All the Lorem Ipsum generators on the All the Lorem Ipsum generators on the</p>
@@ -251,7 +251,7 @@
 								</li>
 							</ul>
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</div>
 			<?php include("notification.php");?>

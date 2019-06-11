@@ -570,7 +570,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="split-row">
+						<!-- <div class="split-row">
 							<div class="col-md-12">
 								<div class="box-inn-sp">
 									<div class="inn-title">
@@ -585,7 +585,7 @@
 											<li><a href="#!"><i class="material-icons">subject</i>View All</a> </li>
 											<li><a href="#!"><i class="material-icons">play_for_work</i>Download</a> </li>
 										</ul>
-										<!-- Dropdown Structure -->
+										<!-- Dropdown Structure 
 									</div>
 									<div class="tab-inn">
 										<div class="table-responsive table-desi">
@@ -665,7 +665,7 @@
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> -->
 					</div>
 				</div>
 			</div>

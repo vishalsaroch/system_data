@@ -58,7 +58,7 @@ session_start();
         <div class="ts-menu">
           <!--SECTION: LOGO-->
           <div class="ts-menu-1">
-            <a href="../index.php"><img src="../images/aff-logo.png" alt=""> </a>
+            <a href="../index.php"><img src="../images/logo2.png" alt="" style="width:100%;height:100%"> </a>
           </div>
           <!--SECTION: BROWSE CATEGORY(NOTE:IT'S HIDE ON MOBILE & TABLET VIEW)-->
           <div class="ts-menu-2"><!-- <a href="#" class="t-bb">All Pages <i class="fa fa-angle-down" aria-hidden="true"></i></a> -->
@@ -208,51 +208,10 @@ session_start();
   </section>
   <section class="tz-login">
 		<div class="tz-regi-form">
+    <img src="../images/logo2.png" alt="" >
 			<h4>Admin Login</h4>
 			<!-- <p>It's free and always will be.</p> -->
-			<form class="col s12" action="index.php" method="post">
-				<div class="row">
-					<div class="input-field col s12">
-						<input type="text" name="mobile">
-						<label>User Name</label>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12">
-						<input type="password" name="password">
-						<label>Password</label>
-					</div>
-				</div>
-				<div class="row">
-					<div class="input-field col s12"> <i class="waves-effect waves-light btn-large full-btn waves-input-wrapper" style=""><input type="submit" value="submit" class="waves-button-input"></i> </div>
-				</div>
-			</form>
-			<p><a href="admin-pass.php">forgot password</a> | Are you a new user ? <a href="admin-register.php">Register</a> </p>
-		</div>
-	</section>
-  <section class="tz-register">
-      <div class="log-in-pop">
-        <!-- <div class="log-in-pop-left">
-          <h1>Hello... <span>{{ name1 }}</span></h1>
-          <p>Don't have an account? Create your account. It's take less then a minutes</p>
-          <h4>Login with social media</h4>
-          <ul>
-            <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a>
-            </li>
-            <li><a href="#"><i class="fa fa-google"></i> Google+</a>
-            </li>
-            <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a>
-            </li>
-          </ul>
-        </div> -->
-        <div class="log-in-pop">
-          
-          <!-- <a href="#" class="pop-close" data-dismiss="modal"><img src="../images/cancel.png" alt="" />
-          </a> -->
-          <h4 clss="text-center">Admin Login</h4><br><br><br>
-          <!-- <p>Don't have an account? Create your account. It's take less then a minutes</p> -->
-          
-          <!-- <form class="user" action="index.php" method="post">
+			<form class="user" action="index.php" method="post">
             <div class="form-group">
               <input type="text" name="mobile" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address...">
             </div>
@@ -260,36 +219,13 @@ session_start();
               <input type="password"  name="password" class="form-control " id="exampleInputPassword" placeholder="Password">
             </div>
             <div class="input-field s4">
-								<input type="submit" value="Login" name="login" class="waves-effect waves-light log-in-btn"> </div>
+								<input type="submit" value="Login" name="login" class="form-control  btn btn-danger"> </div>
             
-          </form> -->
-          <div class="input-field s12"> <p><a href="admin-pass.php">forgot password</a> | Are you a new user ? <a href="admin-register.php">Register</a> </p></div>
-          
-          <!-- <form action="index.php" method="post" class="s12">
-            <div>
-              <div class="input-field s12">
-                <input type="text" name="mobile" class="validate">
-                <label>User name</label>
-              </div>
-            </div>
-            <div>
-              <div class="input-field s12">
-                <input type="password" name="password" class="validate">
-                <label>Password</label>
-              </div>
-            </div>
-            <div>
-              <div class="input-field s4">
-                <input type="submit" value="Login" class="waves-effect waves-light log-in-btn"> </div>
-            </div>
-            <div>
-              <div class="input-field s12"> <a href="forgot-pass.php">Forgot password</a> | <a href="register.php">Create a new account</a> </div>
-            </div>
-          </form> -->
-        </div>
-        
-      </div>
-  </section>
+          </form>
+			<p><a href="admin-pass.php">forgot password</a> | Are you a new user ? <a href="admin-register.php">Register</a> </p>
+		</div>
+	</section>
+  
   
   <!--FOOTER SECTION-->
   
