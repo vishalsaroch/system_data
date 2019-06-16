@@ -6,7 +6,7 @@ $iddd=$_GET["id"];
 <html lang="en">
 <!-- Mirrored from rn53themes.net/themes/demo/directory/db-listing-add.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Apr 2019 07:04:08 GMT -->
 <head>
-	<title>World Best Local Directory Website template</title>
+	<title>Edit Post</title>
 	<!-- META TAGS -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -114,13 +114,11 @@ $iddd=$_GET["id"];
 							<!-- <p>All the Lorem Ipsum generators on the All the Lorem Ipsum generators on the</p> -->
 						</div>
 						<?php
-							$sql="select * from post where id ='".$iddd."' and userid = '".$_SESSION['email']."';  ";
+							$sql="select * from post where id ='".$iddd."' and userid = '".$_SESSION['email']."';";
 							$result = $conn->query($sql);
 							if ($result->num_rows > 0) {
 								while($row = $result->fetch_assoc()) {
-									echo $row["title"];
-								}}
-								
+									// echo $row["title"];
 						?>
 						
 						<div class="hom-cre-acc-left hom-cre-acc-right">
@@ -128,88 +126,66 @@ $iddd=$_GET["id"];
 								<form class="" method="post" action="save_post.php" enctype="multipart/form-data">
 									<div class="row">
 										<div class="input-field col s6">
-											<input id="first_name" type="text" class="validate" name="ad_title">
-											<label for="first_name">Ad Title</label>
+										<!-- <?php echo $row["title"];?> -->
+											<input id="first_name" type="text" class="validate" name="ad_title" disabled>
+											<label for="first_name"><?php echo $row["title"];?></label>
 										</div>
+							
 										<div class="input-field col s6">
 											<input id="last_name" type="text" class="validate" name="price">
-											<label for="last_name">Price</label>
+											<label for="last_name"><?php echo $row["price"];?></label>
 										</div>
 									</div>
-
+								
 									<div class="row">
 										<div class="input-field col s6">
-										<?php
-											$sql="select * from categories";
-											$result = $conn->query($sql);
-										?>
-					                      <input id="last_name" list="Category" type="text" class="validate" name="Category" class="validate">
-											<label for="last_name">Category</label>
-					                     	<datalist id="Category" name="Category">
-					                          <option value="" style="width:100%">Select Location</option>
-					                            <?php
-					                              if ($result->num_rows > 0) {
-					                                while($row = $result->fetch_assoc()) {
-					                                  echo '<option value="'.$row["name"].'">'.$row["name"].'</option>';
-					                                }
-					                              }
-					                            ?>
-					                        </datalist>
-										</div>
+										<input id="last_name" list="Category" type="text" class="validate" name="Category" class="validate" disabled>
+										<label for="last_name"><?php echo $row["categories"]?></label>
+					        </div>
 										<div class="input-field col s6">
-											<?php
-											// $Category = $_GET['Category'];
-											// echo $Category;
-					                        $sql="select * from sub-categories";
-					                        $result = $conn->query($sql);
-					                      ?>
-					                      <input id="last_name" list="sub-Category" type="text" class="validate" name="sub_Categories" class="validate">
-											<label for="last_name"> Sub Category</label>
-					                     	<datalist id="sub-Category" name="Category">
-					                          <option value="" style="width:100%">Select Location</option>
-					                            <?php
-					                              if ($result->num_rows > 0) {
-					                                while($row = $result->fetch_assoc()) {
-					                                  echo '<option value="'.$row["name"].'">'.$row["name"].'</option>';
-					                                }
-					                              }
-					                            ?>
-					                        </datalist>
-										</div>
+											<input id="last_name" list="sub-Category" type="text" class="validate" name="sub_Categories" class="validate" disabled>
+											<label for="last_name"><?php echo $row["sub-categories"]?></label>
+					          </div>
 									</div>
+									
 									<div class="row">
 										<div class="input-field col s4">
-											<select id="list_name" class="validate" name="Condition">
+										<input id="last_name" type="text" class="validate" name="Condition" class="validate" disabled>
+											<!-- <select id="list_name" class="validate" name="Condition">
 												<option>Condition</option>
 												<option value="New">New</option>
 												<option value="Little Used">Little Used</option>
 												<option value="Medimum Used">Medimum Used</option>
 												<option value="Roughly">Roughly</option>
 												<option value="Other">Other</option>
-											</select>
-											<!-- <label for="list_name">Condition</label> -->
+											</select> -->
+											<label for="list_name"><?php echo $row["condition"]?></label>
 										</div>
 										<div class="input-field col s4">
-											<select id="list_name" name="ad_for" class="validate">
+										<input id="last_name" type="text" class="validate" name="ad_for" class="validate" disabled>
+										<label for="list_name"><?php echo $row["ad-for"]?></label>
+											<!-- <select id="list_name" name="ad_for" class="validate">
 												<option>ad for</option>
 												<option value="Sale">Sale</option>
 												<option value="Rent">Rent</option>
 												<option value="Other">Other</option>
-											</select>
+											</select> -->
 										</div>
 										<div class="input-field col s4">
-											<select id="list_name" class="validate" name="Brand">
+										<input id="last_name" type="text" class="validate" name="Brand" class="validate" disabled>
+										<label for="list_name"><?php echo $row["brand"]?></label>
+											<!-- <select id="list_name" class="validate" name="Brand">
 												<option>Brand</option>
 												<option value="Sale">Other</option>
 												
-											</select>
+											</select> -->
 										</div>
 									</div>
 									<div class="row">
 										<div class="input-field col s12">
-											<textarea class="validate" name="ad_description"></textarea>
+											<textarea class="validate" name="ad_description" value="<?php echo $row['discription']?>"></textarea>
 											<!-- <input id="list_phone" type="text" class="validate"> -->
-											<label for="list_phone">Ad Description </label>
+											<label for="list_phone"><?php echo $row["discription"]?></label>
 										</div>
 									</div>
 									<div class="row">
@@ -220,9 +196,10 @@ $iddd=$_GET["id"];
 									<div class="row tz-file-upload">
 										<div class="file-field input-field">
 											<div class="tz-up-btn"> <span>File</span>
-												<input type="file" name="image1"> </div>
+												<input type="file" name="image1"></div>
 											<div class="file-path-wrapper db-v2-pg-inp">
-												<input class="file-path validate" type="text" name="image1"> 
+												<!-- <input class="file-path validate" type="text" name="image1">  -->
+												<img class='rounded-circle' src='data:image/jpeg;base64,".base64_encode($row["image1"])."' height='100' width='100px;' data-toggle='modal' data-target='#myModal'>
 											</div>
 										</div>
 									</div>
@@ -289,7 +266,7 @@ $iddd=$_GET["id"];
 									<div class="row">
 										<div class="input-field col s12">
 											<input id="list_addr" type="text" class="validate" name="address">
-											<label for="list_addr">Address</label>
+											<label for="list_addr"><?php echo $row["address"];?></label>
 										</div>
 									</div>
 									<!-- <div class="row">
@@ -305,8 +282,8 @@ $iddd=$_GET["id"];
 									</div> -->
 									<div class="row">
 										<div class="input-field col s12">
-										<input type="text" name="city">
-										<label for="last_name"> City</label>
+										<input type="text" name="city" value="<?php echo $row['city']?>">
+										<label for="last_name"><?php echo $row["city"];?></label>
 											<!-- <select>
 												<option value="" disabled selected>Choose your city</option>
 												<option value="1">Kyoto</option>
@@ -326,15 +303,21 @@ $iddd=$_GET["id"];
 									</div>
 									<div class="row">
 									<div class="input-field col s12">
-										<select name="show_ads">
+									<input type="text" name="show_ads" disabled>
+										<label for="last_name"><?php echo $row["show_ads"];?></label>
+										<!-- <select name="show_ads">
 											<option value="" disabled selected>Where your Ads show</option>
 											<option value="Home Page">Home Page</option>
 											<option value="Listing Page">Listing Page</option>
 											<option value="Footer Part">Footer Part</option>
 											<option value="Header Part">Header Part</option>
-										</select>
+										</select> -->
 									</div>
 								</div>
+								<?php
+									}
+							}
+							?>
 								<!-- <div class="row">
 									<div class="input-field col s12">
 										<select>
@@ -735,7 +718,7 @@ $iddd=$_GET["id"];
 						</a>
 					</li>
 					<li>
-						<	a href="#!"> <img src="images/icon/dbr6.jpg" alt="" />
+						<a href="#!"> <img src="images/icon/dbr6.jpg" alt="" />
 							<h5>mobile app launch</h5>
 							<p>All the Lorem Ipsum generators on the</p>
 						</a>
